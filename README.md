@@ -4,6 +4,7 @@ A simple Django project that allows users to register, log in, and manage their 
 
 The project is intended for learning and practicing core Django concepts, including authentication, models, views, templates, and basic CRUD operations.
 
+---
 
 ## Features
 
@@ -12,61 +13,28 @@ The project is intended for learning and practicing core Django concepts, includ
 - Tasks are user-specific
 - Clean and beginner-friendly project structure
 
-
+---
 
 ## Setup Instructions
 
-1. **Clone the repository**
+```bash
+# 1. Clone the repository
+git clone https://github.com/Pramish747/Django-Task-Manager-with-Authentication.git
+cd Django-Task-Manager-with-Authentication
 
-            git clone https://github.com/Pramish747/Django-Task-Manager-with-Authentication.git
-            cd Django-Task-Manager-with-Authentication
-2.Create and activate a virtual environment
-    
-        python -m venv venv
-        venv\Scripts\activate
+# 2. Create and activate a virtual environment
+python -m venv venv
+venv\Scripts\activate
 
+# 3. Install dependencies
+pip install django
 
-3.Install dependencies
+# 4. Apply database migrations
+python manage.py makemigrations
+python manage.py migrate
 
-    pip install django
+# 5. Run the development server
+python manage.py runserver
 
-
-4.Apply database migrations
-
-    python manage.py makemigrations
-    python manage.py migrate
-
-
-5.Run the development server
-
-    python manage.py runserver
-
-
-6.Open the application in your browser
-    
-    http://127.0.0.1:8000/
-
-
-Project Structure
-
-myproject/
-├── app1/
-│   ├── migrations/
-│   ├── templates/
-│   │   ├── auth/
-│   │   └── layouts/
-│   ├── models.py
-│   ├── views.py
-│   └── forms.py
-├── myproject/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── manage.py
-└── README.md
-
-
-Author
-
-Pramish747
-GitHub: https://github.com/Pramish747
+# 6. Open the application in your browser
+# http://127.0.0.1:8000/
