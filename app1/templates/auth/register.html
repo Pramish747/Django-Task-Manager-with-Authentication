@@ -1,0 +1,50 @@
+{% extends 'layouts/app.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-sm-6 col-md-5">
+        <div class="card shadow-sm">
+            <div class="card-header bg-success text-white">
+                <h4 class="mb-0 text-center">Register</h4>
+            </div>
+
+            <div class="card-body">
+                <form method="POST">
+                    {% csrf_token %}
+
+                    <div class="mb-3">
+                        <label class="form-label">Username</label>
+                        {{ form.username }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        {{ form.password1 }}
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Confirm Password</label>
+                        {{ form.password2 }}
+                    </div>
+
+                    {% if form.errors %}
+                        <div class="alert alert-danger py-2">
+                            Please fix the errors above
+                        </div>
+                    {% endif %}
+
+                    <button type="submit" class="btn btn-success w-100">
+                        Register
+                    </button>
+                </form>
+
+                <hr>
+                <p class="text-center text-muted mb-0">
+                    Already have an account?
+                    <a href="{% url 'login' %}">Login here</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
