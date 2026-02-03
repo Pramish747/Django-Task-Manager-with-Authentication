@@ -17,6 +17,56 @@ The project is intended for learning and practicing core Django concepts, includ
 ## Setup Instructions
 
 1. **Clone the repository**
-git clone https://github.com/Pramish747/Django-Task-Manager-with-Authentication.git
-cd Django-Task-Manager-with-Authentication
-2.
+
+            git clone https://github.com/Pramish747/Django-Task-Manager-with-Authentication.git
+            cd Django-Task-Manager-with-Authentication
+2.Create and activate a virtual environment
+    
+        python -m venv venv
+        venv\Scripts\activate
+
+
+3.Install dependencies
+
+    pip install django
+
+
+4.Apply database migrations
+
+    python manage.py makemigrations
+    python manage.py migrate
+
+
+5.Run the development server
+
+    python manage.py runserver
+
+
+6.Open the application in your browser
+    
+    http://127.0.0.1:8000/
+
+
+Project Structure
+
+myproject/
+├── app1/
+│   ├── migrations/
+│   ├── templates/
+│   │   ├── auth/
+│   │   └── layouts/
+│   ├── models.py
+│   ├── views.py
+│   └── forms.py
+├── myproject/
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── manage.py
+└── README.md
+
+
+Author
+
+Pramish747
+GitHub: https://github.com/Pramish747
